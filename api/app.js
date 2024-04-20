@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URL, {
 });
 
 app.use("/", (req, res) => {
-  res.send("Welcome to the API");
+  
 });
 
 app.use(express.json());
