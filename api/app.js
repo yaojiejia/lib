@@ -20,6 +20,10 @@ mongoose.connect(process.env.MONGODB_URL, {
   console.log('Failed to connect to MongoDB', err);
 });
 
+app.use("/", (req, res) => {
+  res.send("Welcome to the API");
+});
+
 app.use(express.json());
 
 app.use("/api/posts", postRoute);
